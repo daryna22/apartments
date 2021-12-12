@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+.header {
+    background-color: orange;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: 4px solid darkviolet;
+}
+.navbar {
+    max-width: 1280px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-small {
+    max-width: 100px;
+    max-height: 100px;
+}
+.navbar__menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    text-align: center;
+}
+.navbar__item {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.navbar__link {
+    text-decoration: none;
+    color: #fff;
+}
+.navbar__callback {
+    display: block;
+    color: #fff;
+    margin-bottom: 4px;
+    line-height: 16px;
+}
+.navbar__contacts{
+    text-align: right;
+}
+.navbar__phone {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none;
+    color: #fff;
+}

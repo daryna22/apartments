@@ -4,11 +4,21 @@ $(document).ready(function () {
     let counterUp = $(".counter__up");
     let counterDown = $(".counter__down");
 
+    let modal = $(".modal");
+    let modalCloseButton = $(".modal__close-button");
+
+    let viewFlatsButton = $(".view__flats");
+
+    viewFlatsButton.on("click", toggleModal)
+
     floorPath.on("mouseover", function () {
         floorPath.removeClass("current__floor");
         currentFloor = $(this).attr("data-floor");
         $(".counter").text(currentFloor);
     });
+
+floorPath.on("click", toggleModal);
+modalCloseButton.on("click", toggleModal);
 
     counterUp.on("click", function() {
         if (currentFloor < 18) {
@@ -29,4 +39,7 @@ $(document).ready(function () {
         $(`[data-floor=${usCurrentFloor}]`).toggleClass("current__floor");
         }
     });
+    function toggleModal() {
+        modal.toggleClass("is-open")
+    }
 });

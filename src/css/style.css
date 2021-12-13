@@ -117,3 +117,6 @@ body {
     cursor: pointer;
 
 }
+path.current__floor {
+    opacity: 1;
+}

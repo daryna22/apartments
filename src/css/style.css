@@ -1,3 +1,9 @@
+@font-face {
+    font-family: "Bebas Neue";
+    src: local("BebasNeueRegular"), url("../fonts/BebasNeueRegular.woff2") format("woff2"),
+    url("../fonts/BebasNeueRegular.woff") format("woff");
+    font-display: swap;
+}
 * {
     box-sizing: border-box;
 }
@@ -8,7 +14,7 @@ body {
     background-color: orange;
     padding-top: 12px;
     padding-bottom: 12px;
-    border-bottom: 4px solid darkviolet;
+    border-bottom: 4px solid #9400d3;
 }
 .navbar {
     max-width: 1280px;
@@ -18,8 +24,8 @@ body {
     align-items: center;
 }
 .logo-small {
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 40px;
+    max-height: 40px;
 }
 .navbar__menu {
     margin: 0;
@@ -51,4 +57,63 @@ body {
     line-height: 20px;
     text-decoration: none;
     color: #fff;
+}
+.main {
+    display: flex;
+    max-width: 1280px;
+    margin: auto;
+    padding-top: 34px;
+    padding-bottom: 20px;
+}
+.main__info {
+    flex-grow: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.house path {
+    opacity: 0;
+}
+.house path:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+.counter__group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.counter__button {
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.counter__arrow-down {
+    transform: rotateX(180deg);
+}
+.main__title {
+    margin: 0;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: normal;
+    font-size: 37px;
+    line-height: 37px;
+    color: orange;
+}
+.counter {
+    color: orange;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 125px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.button__primary {
+    background: orange;
+    border-radius: 6px;
+    color: #fff;
+    border: none;
+    padding: 16px 36px;
+    cursor: pointer;
+
 }

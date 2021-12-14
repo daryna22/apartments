@@ -81,6 +81,7 @@ body {
     opacity: 1;
     cursor: pointer;
 }
+
 .counter__group {
     display: flex;
     flex-direction: column;
@@ -198,6 +199,13 @@ path.current__floor {
     color: blue;
     text-decoration: underline;
 }
+.flats .flat-path-mouseover {
+    opacity: 1;
+  }
+.flat-link-mouseover {
+    color: #3596F5;
+    text-decoration: underline;
+  }
 .modal__alert {
     font-style: italic;
     font-weight: normal;

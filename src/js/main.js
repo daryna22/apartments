@@ -7,6 +7,31 @@ $(document).ready(function () {
     let modal = $(".modal");
     let modalCloseButton = $(".modal__close-button");
 
+    let currentFlat = 40;
+    let usCurrentFlat = 40;
+    let flatPath = $(".modal__window path");
+    let flatLink = $(".flat__item a");
+
+    flatPath.on("mouseover", function() {
+        let currentFlatOrder = +$(this).attr("data-flat") - 40;  
+        $(`.flat__link:eq(${currentFlatOrder})`).addClass("flat-link-mouseover");
+    });
+
+    flatPath.on("mouseout", function() {
+        $('.flat__link').removeClass('flat-link-mouseover');
+      });
+
+      flatLink.on("mouseover", function() {
+        currentFlat = +$(this).attr("data-flat-link");
+        let usCurrentFlat = currentFlat.toLocaleString('en-US', {minimumIntegerDigits: 2,
+          useGroupping: false });
+        $(`[data-flat=${usCurrentFlat}]`).addClass("flat-path-mouseover");
+      });
+      flatLink.on("mouseout", function() {
+        $(`.flats path`).removeClass("flat-path-mouseover");
+      });
+
+
     let viewFlatsButton = $(".view__flats");
 
     viewFlatsButton.on("click", toggleModal)
